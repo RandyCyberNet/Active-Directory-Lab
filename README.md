@@ -9,7 +9,8 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 
 - <b>PowerShell</b> 
 - <b>Windows Domain Controller</b>
-- <b>Active Directory Users and Computers</b> 
+- <b>Active Directory Users and Computers</b>
+- <b>Organizational Units & Delegation</b>
 - <b>Group Policy Objects</b>
 - <b>Networking Configurations (TCP/IP, DNS, DHCP settings)</b> 
 
