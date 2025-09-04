@@ -23,27 +23,27 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
+The Network Topology diagram: <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Select the disk:  <br/>
+install windows server 2025 into Vbox:  <br/>
 <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
+Importatn network configurations (network adaptors): <br/>
 <img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Confirm your selection:  <br/>
+Once windows server is up, change the deafult name of the system and go to network adaptors and determine which one is connected to the public and internal networks and label them. APIPA will be the internal network:  <br/>
 <img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
+configure the internal netowork to have a static IP address and a loop back DNS server:  <br/>
 <img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
+Install necesary software to have Active direcotry on the DC :  <br/>
 <img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
