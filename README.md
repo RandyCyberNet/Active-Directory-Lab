@@ -17,7 +17,7 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 <h2>Environments Used </h2>
 
 - <b>Windows 10</b> (21H2)
-- <b>Windows Server 2025</b>
+- <b>Windows Server 2025</b> (24H2)
 - <b>Oracle VirtualBox</b>
 
 <h2>Program walk-through:</h2>
