@@ -7,12 +7,14 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
+- <b>PowerShell Scripts</b> 
 - <b>Windows Domain Controller</b>
 - <b>Active Directory Users and Computers</b>
 - <b>Organizational Units & Delegation</b>
 - <b>Group Policy Objects</b>
-- <b>Networking Configurations (TCP/IP, DNS, DHCP settings)</b> 
+- <b>Networking Configurations (TCP/IP, DNS, DHCP settings)</b>
+- <b>Using SMB for File Sharing</b>
+- <b>Shadow Volume Copy</b>
 
 <h2>Environments Used </h2>
 
@@ -24,7 +26,7 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 
 <p align="center">
 The Network Topology diagram: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/60V22vc" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 install windows server 2025 into Vbox:  <br/>
