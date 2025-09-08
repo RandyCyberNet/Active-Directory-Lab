@@ -103,7 +103,7 @@ Using the CLIENT1 computer, I logged in with a random user the script created. <
 <img src="https://imgur.com/wBOg6MB.png" height="80%" width="80%" />
 <br />
 <br />
-I manually put Maria into the MarketingInterns security group, in the DC computer, and set to only be able to access the MarketingInterns folder (tested successfully).  <br/>
+I manually put Maria into the MarketingInterns security group, in the DC computer, and should only be able to access the MarketingInterns folder (tested successfully).  <br/>
 <img src="https://imgur.com/CN3jgW6.png" height="80%" width="80%" />
 <br />
 <br />
