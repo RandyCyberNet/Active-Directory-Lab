@@ -26,7 +26,7 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 
 <p align="center">
 The Network Topology diagram: <br/>
-<img src="https://imgur.com/60V22vc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/uDROi1p.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 install windows server 2025 into Vbox:  <br/>
