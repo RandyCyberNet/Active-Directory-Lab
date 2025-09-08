@@ -25,87 +25,105 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 <h2>Program walk-through:</h2>
 
 <p align="center">
-The Network Topology diagram: <br/>
-<img src="https://imgur.com/uDROi1p.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The Topology diagram: <br/>
+<img src="https://imgur.com/uDROi1p.png" height="80%" width="80%"/>
 <br />
 <br />
-install windows server 2025 into Vbox:  <br/>
-<img src="https://imgur.com/4hBtQeW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+(Inside VBox Windows 2025 Server) Checking which network card is the internal one (will have an APIPA address), and labeling each one either public or internal.  <br/>
+<img src="https://imgur.com/4hBtQeW.png" height="80%" width="80%"/>
 <br />
 <br />
-Importatn network configurations (network adaptors): <br/>
+<br/>
 <img src="https://imgur.com/x6avdkf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Once windows server is up, change the deafult name of the system and go to network adaptors and determine which one is connected to the public and internal networks and label them. APIPA will be the internal network:  <br/>
+Assigning a static IPv4 address to the Internal card, which will also be the default gateway for the CLIENT1. Then I loop back the DNS server to use itself as a resolver, since I will configure an AD forest and the process typically installs the DNS server role on the first Domain Controller. This allows for self-sufficiency and redundant DNS resolution.
+<br/>
 <img src="https://imgur.com/F47Rskt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-configure the internal netowork to have a static IP address and a loop back DNS server:  <br/>
+Here I install the software necessary for a DC, and then create a new forest when prompted to promote the DC server.<br/>
 <img src="https://imgur.com/FdJ73zZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Then I create a new user (myself) to have admin controls instead of using the default admin account from the DC. <br/>
 <img src="https://imgur.com/06As9zU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
+Next, I installed RAS and NAT to allow CLIENT1 to have Internet access in this “private VM Network." <br/>
 <img src="https://imgur.com/lyimecE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+I then install the DHCP software to configure the DC server to hand out IPv4 addresses, giving it a range of 172.16.0.100–200. <br/>
 <img src="https://imgur.com/qWsTj1u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Next, I create an SMB file-sharing folder using a disk volume (Shared Drive) for other users to access a shared network folder. I also configured Volume Shadow Copy (Backup, shared main) for redundancy and set it to back up at the end of the day at midnight.  <br/>
 <img src="https://imgur.com/hwmWoAT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+I then created OUs and added security groups for:
+AllAdmins = Stores all admins from all IT operations (Filesharing/lab/server/etc)
+AllUsers = Stores all users (employees/Interns/Managers/etc)
+Security Groups
+Admin Groups = Contains different IT Admin security groups, which allows adding or removing members from these groups.
+UserGroups = Contains different security groups, like Finance Interns group, Marketing Interns group, Finance employees group, etc.
+SharedFolder (Employees)
+Finance Managers/employees = Group with the finance employee group
+IT admins/employees = Group with the IT employees/admins group
+Marketing managers/employees = Group with the marketing managers/employees group
+Shared Folder (Interns)
+Finance = Group with only the Finance Interns group
+IT = Group with only the IT Interns group
+Marketing = Group with only the Marketing Interns group <br/>
 <img src="https://imgur.com/0VCFypl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Created separate folders for the Finance, Marketing, and IT interns. Gave them full control except for Delete, Change Permissions, and Take Ownership permissions. I also added access for the corresponding security group to each folder (Marketing group access only to the Marketing folder, Finance group access only to the Finance folder, etc).  <br/>
 <img src="https://imgur.com/qQ6HtOB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Created a mapped Shared Folder for all users to access the shared network folder and their respective files. <br/>
 <img src="https://imgur.com/GL709TC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Configured the account lockout threshold to 3 attempts before lockout.<br/>
 <img src="https://imgur.com/GOh20x4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Implemented and ran a PowerShell script to create 50 new users, store them in the AllUsers OU, and assign them a default password. <br/>
 <img src="https://imgur.com/A3ycBZZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+<br/>
 <img src="https://imgur.com/516A2N6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Using the CLIENT1 computer, I logged in with a random user I just created. <br/>
 <img src="https://imgur.com/wBOg6MB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+I manually put Maria into the MarketingInterns security group, and she was only able to access the MarketingInterns folder (tested successfully).  <br/>
 <img src="https://imgur.com/CN3jgW6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+<br/>
 <img src="https://imgur.com/KveyzvO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Also ensured that Maria and the other users created did not have administrative permissions. <br/>
 <img src="https://imgur.com/hKETq77.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+Finally, I checked to ensure CLIENT1 and the users connected to it had Internet access through the DC server. <br/>
+<img src="https://imgur.com/UNXTlNL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br/>
 <img src="https://imgur.com/iMpNnZa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Install necesary software to have Active direcotry on the DC :  <br/>
+<br/>
 <img src="https://imgur.com/UyfhZhO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
