@@ -110,7 +110,7 @@ Install necesary software to have Active direcotry on the DC :  <br/>
 <br />
 <br />
 Install necesary software to have Active direcotry on the DC :  <br/>
-<img src="https://imgur.com/06As9zU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/UyfhZhO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
