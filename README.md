@@ -1,8 +1,7 @@
 <h1>🖥️Active Directory Lab</h1>
 
 <h2>Description</h2>
-This project demonstrates the setup and configuration of a Windows Active Directory home lab designed to simulate enterprise-level identity and access management.
-<br />
+This project creates a Windows Active Directory home lab to demonstrate enterprise-level identity and access management. It showcases the setup and configuration of a Windows Domain Controller and its associated services, highlighting the use of PowerShell scripting for task automation. The project also covers the implementation of Organizational Units (OUs) and Group Policy Objects (GPOs) for user and system management, as well as the configuration of DNS, DHCP, and file-sharing permissions with SMB to create a secure and functional network environment. <br />
 
 
 <h2>Languages and Utilities Used</h2>
