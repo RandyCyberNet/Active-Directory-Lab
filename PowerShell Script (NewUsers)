@@ -1,0 +1,31 @@
+# Constant Variables #
+$PASSWORD_FOR_USERS   = "Password1"
+$USER_FIRST_LAST_LIST = Get-Content .\names.txt
+# ------------------------------------------------------ #
+
+#Makes the password to a secure object that can be used to actually use as a password# 
+$password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+
+#Script bellow creates new OU to store Users#
+#New-ADOrganizationalUnit -Name _Users -ProtectedFromAccidentalDeletion $false#
+
+foreach ($n in $USER_FIRST_LAST_LIST) {
+    $first = $n.Split(" ")[0].ToLower()
+    $last = $n.Split(" ")[1].ToLower()
+
+    #Grabs the first letter of the first name and adds it to the last name, all lowercase username#
+    $username = "$($first.Substring(0,1))$($last)".ToLower()
+
+    #Echos or displays the username that has been created for that person#
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $first `
+               -Surname $last `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=AllUsers, ou=Corporate,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+}
