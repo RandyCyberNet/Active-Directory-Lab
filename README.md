@@ -26,31 +26,91 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 
 <p align="center">
 The Network Topology diagram: <br/>
-<img src="https://imgur.com/60V22vc" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/60V22vc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 install windows server 2025 into Vbox:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/4hBtQeW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Importatn network configurations (network adaptors): <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/x6avdkf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Once windows server is up, change the deafult name of the system and go to network adaptors and determine which one is connected to the public and internal networks and label them. APIPA will be the internal network:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/F47Rskt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 configure the internal netowork to have a static IP address and a loop back DNS server:  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/FdJ73zZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Install necesary software to have Active direcotry on the DC :  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/06As9zU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/lyimecE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/qWsTj1u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/hwmWoAT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/0VCFypl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/vr5e4JZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/06As9zU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="hhttps://imgur.com/GL709TCpng" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/GOh20x4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/A3ycBZZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/516A2N6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/wBOg6MB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/CN3jgW6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/KveyzvO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/hKETq77.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/iMpNnZa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Install necesary software to have Active direcotry on the DC :  <br/>
+<img src="https://imgur.com/06As9zU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
