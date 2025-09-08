@@ -14,6 +14,7 @@ This project demonstrates the setup and configuration of a Windows Active Direct
 - <b>Group Policy Objects</b>
 - <b>Networking Configurations (TCP/IP, DNS, DHCP settings)</b>
 - <b>Using SMB for File Sharing</b>
+- <b>File Sharing Permissions & Access</b>
 - <b>Shadow Volume Copy</b>
 
 <h2>Environments Used </h2>
