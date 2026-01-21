@@ -115,7 +115,7 @@ Also ensured that Maria and the other users created did not have administrative 
 <img src="https://imgur.com/hKETq77.png" height="80%" width="80%" />
 <br />
 <br />
-Finally, I checked to ensure CLIENT1 and the users connected to it had Internet access through the DC server. <br/>
+Finally, I checked to ensure CLIENT1 and the users connected to the DC had Internet access through the DC server. <br/>
 <img src="https://imgur.com/UNXTlNL.png" height="80%" width="80%" />
 <br />
 <br />
